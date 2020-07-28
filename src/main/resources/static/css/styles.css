@@ -24,3 +24,12 @@ table {
             padding: 10px;
             text-align: center;
 }
+.square {
+    background:#0f0f;
+    width: 5vw;
+    height: 5vw;
+}
+
+/*.square h1 {
+    color: #fff;
+}*/
