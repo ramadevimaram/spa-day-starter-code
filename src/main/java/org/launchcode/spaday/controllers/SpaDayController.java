@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 
 @Controller
+@RequestMapping("menu")
 public class SpaDayController {
 
     public boolean checkSkinType(String skinType, String facialType) {
