@@ -24,12 +24,22 @@ table {
             padding: 10px;
             text-align: center;
 }
-.square {
-    background:#0f0f;
+
+.square-blue {
+    background:blue;
     width: 5vw;
     height: 5vw;
 }
-
+.square-yellow {
+    background:yellow;
+    width: 5vw;
+    height: 5vw;
+}
+.square-green {
+    background:green;
+    width: 5vw;
+    height: 5vw;
+}
 /*.square h1 {
     color: #fff;
 }*/
