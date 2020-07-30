@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<!--    <div th:if="${username}" th:text="${'UserName:'+username}" style="color:Blue"></div>-->
+<!--    <br>-->
+    <a th:href ="@{/}">Click here it will redirect to the RootPath of App( serviceSelection)</a>
+    <br>
+    <ul>
+    <li class="nav-item"><a class="nav-link" href="/user">All Events</a> </li>
+    </ul>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>UserName</th>
+            <th>Email</th>
+            <th>ID</th>
+        </tr>
+        </thead>
+        <tr th:each="users : ${user}">
+            <td th:text="${users.id}"></td>
+            <td th:text="${users.username}"></td>
+            <td th:text="${users.email}"></td>
+            <td th:text="${users.date}"></td>
+        </tr>
+    </table>
+</body>
+</html>
