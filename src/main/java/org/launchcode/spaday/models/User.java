@@ -1,10 +1,12 @@
 package org.launchcode.spaday.models;
 
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 public class User {
     private int id;
     private static int nextId = 1;
+    @Size(min= 3, max=50)
     private String username;
     private String email;
     private String password;
