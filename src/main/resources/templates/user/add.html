@@ -6,30 +6,48 @@
     <title>Sign Up</title>
 </head>
 <body>
+<!--    <p th:text="${error}" style="color:red"></p>-->
     <form method = 'post' th:action="@{/user}">
-        <label>
-            Username:
-            <input type = 'text' name = 'username' th:value="${username}">
-        </label>
-
-        <label>
-            Email:
-            <input type = 'email' name = 'email' th:value="${email}">
-        </label>
-
-        <label>
-            Password:
-            <input type = 'password' name = 'password'>
-        </label>
-
-        <label>
-            Verify Password:
-            <input type = 'password' name = 'verify'>
-        </label>
-
-        <p th:text="${error}"></p>
-
+<!--        <label>-->
+<!--            Username:-->
+<!--            <input type = 'text' name = 'username' th:value="${username}">-->
+<!--        </label>-->
+        <div>
+            <label>
+                Username:
+                <input type="text" th:field="${user.username}" />
+                <p class="error" th:errors="${user.username}"></p>
+            </label>
+        </div>
+        <div>
+            <label>
+                Email:
+                <input type="text" th:field="${user.email}" />
+                <p class="error" th:errors="${user.email}"></p>
+            </label>
+        </div>
+        <div>
+            <label>
+                Password:
+                <input type="password" th:field="${user.password}" />
+                <p class="error" th:errors="${user.password}"></p>
+            </label>
+        </div>
+        <div>
+<!--            <label>-->
+<!--                Verify Password:-->
+<!--                <input type = 'password' name = 'verify'>-->
+<!--            </label>-->
+            <label>
+                Verify Password:
+                <input type = 'password' th:field="${user.verifyPassword}">
+                <p class="error" th:errors="${user.verifyPassword}"></p>
+            </label>
+        </div>
+<!--        <p th:text="${error}"></p>-->
+    <div>
         <input type = 'submit' value = 'Sign Up'>
+    </div>
     </form>
 
 </body>
